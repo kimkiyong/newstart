@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>홈페이지</title>
     <!--  1. 부트스트랩 css CDN 연결 -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-      crossorigin="anonymous"
-    />
-	<style>
-		/* 부트스트랩 container 최대폭 늘리기 */
-		/* 부트스트랩5에서 1400px 크기를 지원하지만, 4버전에서도 충분히 늘려줄수 있음 */
-		@media screen and (max-width: 1440px) {
-		  .container {
-			max-width: 1440px;
-		  }
-		}
-		@media screen and (max-width: 1440px) {
-		  .container {
-			max-width: 1320px;
-		  }
-		}
-		ul,
-		ol {
-		  list-style: none;
-		}
-		#gnb,
-		#etc {
-		  column-gap: 1rem;
-		  margin: 0;
-		  padding: 0;
-		}
-		#bar {
-		  background: #5ba3ff;
-		  height: 5px;
-		  font-size: 0;
-		}
-		header::after {
-		  content: "";
-		  display: block;
-		  width: 100%;
-		  height: 1px;
-		  background: #5ba3ff;
-		}
-		section.courses {
-		  position: relative;
-		  background: #0170ff;
-		  height: 700px;
-		
-		}/*
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <style>
+        /* 부트스트랩 container 최대폭 늘리기 */
+        /* 부트스트랩5에서 1400px 크기를 지원하지만, 4버전에서도 충분히 늘려줄수 있음 */
+        @media screen and (max-width: 1440px) {
+            .container {
+                max-width: 1440px;
+            }
+        }
+
+        @media screen and (max-width: 1440px) {
+            .container {
+                max-width: 1320px;
+            }
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        #gnb,
+        #etc {
+            column-gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        #bar {
+            background: #5ba3ff;
+            height: 5px;
+            font-size: 0;
+        }
+
+        header::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #5ba3ff;
+        }
+
+        section.courses {
+            position: relative;
+            background: #0170ff;
+            height: 700px;
+
+        }
+
+        /*
 		section.courses::after {
 		  content: "";
 		  display: block;
@@ -65,274 +69,280 @@
 		  clip-path: polygon(0 0, 0 100%, 100% 100%, 0 calc(100% - 180px));
 		}
 		*/
-		.short-bar {
-		  border: 0;
-		  width: 60px;
-		  height: 3px;
-		  background: #f1f1f1;
-		}
-	  </style>
- <body>
-	
-   <h1 class="d-none">달무리</h1>
-   <header style="background: gray">
-	 <div class="container-fluid">
-	   <div class="row align-items-center" style="height: 100px">
-		 <div class="logo col-lg-2 col-lg-2 col-md-2 col-sm-12 text-center">
-		   <a href="index.html" class="text-light">달무리</a>
-		 </div>
-		 <ul class="nav nav-tabs">
-			<li class="nav-item dropdown">
-			  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="about.html" role="button" aria-expanded="false">소개</a>
-			  <div class="dropdown-menu">
-				<a class="dropdown-item" href="about.html">소개</a>
-				<a class="dropdown-item" href="group.html">조직도</a>
-				<a class="dropdown-item" href="#">Something else here</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="#">Separated link</a>
-			  </div>
-			</li>
-			  <li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="program.html" role="button" aria-expanded="false">프로그램</a>
-				<div class="dropdown-menu">
-				  <a class="dropdown-item" href="#">Action</a>
-				  <a class="dropdown-item" href="#">Another action</a>
-				  <a class="dropdown-item" href="#">Something else here</a>
-				  <div class="dropdown-divider"></div>
-				  <a class="dropdown-item" href="#">Separated link</a>
-				</div>
-			</li>
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="bussion.html" role="button" aria-expanded="false">주요사업</a>
-				<div class="dropdown-menu">
-				  <a class="dropdown-item" href="#">Action</a>
-				  <a class="dropdown-item" href="#">Another action</a>
-				  <a class="dropdown-item" href="#">Something else here</a>
-				  <div class="dropdown-divider"></div>
-				  <a class="dropdown-item" href="#">Separated link</a>
-				</div>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link"href="notice">공지사항</a>
-			
-		</li>
-	</ul>
-	<nav class="etc-nav col-lg-5 col-lg-5 col-md-4 col-sm-12">
-	 <ul id="etc" class="d-flex justify-content-end">
-	 <li><a href="#" class="text-light">검색</a></li>
-	 <li><a href="#" class="text-light">고객센터</a></li>
-	 <li><a href="#" class="text-light">로그인</a></li>
-	 </ul>
-   </nav>
-   </div>
- </div>
- <div class="container-fluid" id="search-box">
-  <div class="container">
-   <div class="row">
-	  <div class="col-1" id="bar">선</div>
-   </div>
- </div>
+        .short-bar {
+            border: 0;
+            width: 60px;
+            height: 3px;
+            background: #f1f1f1;
+        }
 
- 
-	   </div>
-	 </div>
-	 <div class="container-fluid" id="search-box">
-		<div class="container">
-		 <div class="row">
-			  <div class="col-1" id="bar">선</div>
-	   </div>
-	 </div>
-   </header>
-   <section class="courses">
-	<div class="container-fluid" id="search-box">
-   <div class="container">
-    <div class="row">
-	 <div class="container-fluid">
-	   <div class="container">
-		 <div class="row flex-column">
-		   <h2 class="text-center text-light pt-5">
-			 뭘 원하는지 몰라서 다 준비했어 <br />
-		   </h2>
-		   <hr class="short-bar" />
-		   <p class="text-center text-light">
-			 new Start over life, 달무리
-		   </p>
-		 </div>
-	   </div>
-	    <div class="container-fluid">
-	   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators ">
-		  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-		  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-		  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-		</ol>
-		<div class="carousel-inner">
-		  <div class="carousel-item active">
-			<img src="image/pic1.jpg" class="d-block w-100 img-fluid" alt="포스터1">
-			<div class="carousel-caption d-none d-md-block">
-			  <h5>First slide label</h5>
-			  <p>Some representative placeholder content for the first slide.</p>
-			</div>
-		  </div>
-		  <div class="carousel-item">
-			<img src="image/pic2.jpg" class="d-block w-100 img-fluid" alt="포스터2">
-			<div class="carousel-caption d-none d-md-block">
-			  <h5>Second slide label</h5>
-			  <p>Some representative placeholder content for the second slide.</p>
-			</div>
-		  </div>
-		  <div class="carousel-item">
-			<img src="image/pic3.jpg" class="d-block w-100 img-fluid" alt="포스터3">
-			<div class="carousel-caption d-none d-md-block">
-			  <h5>Third slide label</h5>
-			  <p>Some representative placeholder content for the third slide.</p>
-			</div>
-		</div>
-		<button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
-		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-		  <span class="sr-only">Previous</span>
-		</button>
-		<button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
-		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-		  <span class="sr-only">Next</span>
-		</button>
-	  </div>
-	  <br>
-	  </div>
-	  <div class="container-fluid">
+    </style>
 
-		  <p class="h6">공지사항</p>
-		  <table class="table table-striped">
-			<thead>
-			  <tr>
-				<th scope="col">번호</th>
-				<th scope="col">제목</th>
-				<th scope="col">날짜</th>
-			  </tr>
-			</thead>
-			<tbody>
-			  <tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-			  </tr>
-			  <tr>
-				<th scope="row">2</th>
-				<td>Jacob</td>
-				<td>Thornton</td>
-			  </tr>
-			  <tr>
-				<th scope="row">3</th>
-				<td>Larry</td>
-				<td>the Bird</td>
-			  </tr>
-			</tbody>
-		  </table>
-		</div>
-		<footer class ="container-fluid">
-			<div class="container-fluid bg-dark">
-			  <div class="container-fluid d-flex justify-content-between align-items-center px-0">
-			  <div class="links">
-					<a href="#" class="text-light mr-1">처음으로</a>
-				  </div>
-				  <div class="top-btn bg-primary">
-					<a href="#" class="text-light d-block text-center" style="width:40px; height: 40px; line-height: 40px;">
-					  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-						<path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-					  </svg>
-					</a>
-				  </div>
-				</div>
-			  </div>
-				<div class="container-fluid bg-primary">
-				  <div class="container">
-					  <p class="brand text-light">달무리 (청년문화 기획사)</p>
-					  <p class="info text-light">대표자 : 문준혁   사업자등록번호 : 679-88-05193   주소 : 광주광역시 동구문화전당로5 3층 전화 : 062-362-7797  이메일 : us@aicc.com</p>
-					  <nav class="under-nav">
-					  <ul class="d-flex">
-						<li><a href="#" class="text-light">이용약관</a></li>
-						<li><a href="#" class="text-light">개인정보취급방침</a></li>
-						<li><a href="#" class="text-light">무단이메일수집거부</a></li>
-						<li><a href="#" class="text-light">환불정책</a></li>
-						<li><a href="#" class="text-light">자주묻는질문</a></li>
-					  </ul>
-					</nav>
-					<p class="copy text-light">&copy; ai codecamp. 2023. all rights reserved.</p>
-				  </div>
-				</div>
-			  </footer>
-			  <!-- 2. 부트스트랩 js CDN 연결 --> 
-			  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-			  
-			  <!--
+<body>
+
+    <h1 class="d-none">달무리</h1>
+    <header style="background: gray">
+        <div class="container-fluid">
+            <div class="row align-items-center" style="height: 100px">
+                <div class="logo col-lg-2 col-lg-2 col-md-2 col-sm-12 text-center">
+                    <a href="index.html" class="text-light">달무리</a>
+                </div>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="about.html" role="button" aria-expanded="false">소개</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="about.html">소개</a>
+                            <a class="dropdown-item" href="group.html">조직도</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="program.html" role="button" aria-expanded="false">프로그램</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="bussion.html" role="button" aria-expanded="false">주요사업</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="notice">공지사항</a>
+
+                    </li>
+                </ul>
+                <nav class="etc-nav col-lg-5 col-lg-5 col-md-4 col-sm-12">
+                    <ul id="etc" class="d-flex justify-content-end">
+                        <li><a href="#" class="text-light">검색</a></li>
+                        <li><a href="#" class="text-light">고객센터</a></li>
+                        <li><a href="#" class="text-light">로그인</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="container-fluid" id="search-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-1" id="bar">선</div>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+        <div class="container-fluid" id="search-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-1" id="bar">선</div>
+                </div>
+            </div>
+    </header>
+    <section class="courses">
+        <div class="container-fluid" id="search-box">
+            <div class="container">
+                <div class="row">
+                    <div class="container-fluid">
+                        <div class="container">
+                            <div class="row flex-column">
+                                <h2 class="text-center text-light pt-5">
+                                    뭘 원하는지 몰라서 다 준비했어 <br />
+                                </h2>
+                                <hr class="short-bar" />
+                                <p class="text-center text-light">
+                                    new Start over life, 달무리
+                                </p>
+                            </div>
+                        </div>
+						
+                        <div class="container-fluid">
+							<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+								<ol class="carousel-indicators">
+									<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+									<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+									<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+								</ol>
+
+								<div class="container-fluid">
+									<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+										<ol class="carousel-indicators">
+											<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+											<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+											<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+										</ol>
+										<div class="carousel-inner">
+											<div class="carousel-item active">
+												<img src="image/pic1.jpg" class="d-block mx-auto img-fluid" alt="포스터1">
+												<div class="carousel-caption d-none d-md-block"></div>
+											</div>
+											<div class="carousel-item">
+												<img src="image/pic2.jpg" class="d-block mx-auto img-fluid" alt="포스터2">
+												<div class="carousel-caption d-none d-md-block"> 				
+												</div>
+											</div>
+											<div class="carousel-item">
+												<img src="image/pic3.jpg" class="d-block mx-auto img-fluid" alt="포스터3">
+												<div class="carousel-caption d-none d-md-block">
+												</div>
+											</div>
+											<button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+												<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+												<span class="sr-only">Previous</span>
+											</button>
+											<button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+												<span class="carousel-control-next-icon" aria-hidden="true"></span>
+												<span class="sr-only">Next</span>
+											</button>
+										</div>
+										<br>
+									</div>
+								</div>
+								<!-- <div class="carousel-inner">
+									<div class="carousel-item active">
+										<img src="image/pic1.jpg" class="d-block w-100 img-fluid" alt="포스터1">
+										<div class="carousel-caption d-none d-md-block"></div>
+									</div>
+									<div class="carousel-item">
+										<img src="image/pic2.jpg" class="d-block w-100 img-fluid" alt="포스터2">
+										<div class="carousel-caption d-none d-md-block">
+											<h5>Second slide label</h5>
+											<p>Some representative placeholder content for the second slide.</p>
+										</div>
+									</div>
+									<div class="carousel-item">
+										<img src="image/pic3.jpg" class="d-block w-100 img-fluid" alt="포스터3">
+										<div class="carousel-caption d-none d-md-block">
+											<h5>Third slide label</h5>
+											<p>Some representative placeholder content for the third slide.</p>
+										</div>
+									</div>
+									<button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="sr-only">Previous</span>
+									</button>
+									<button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</button>
+								</div>
+								<br>
+							</div>
+						</div> -->
+
+
+                                <footer class="container-fluid">
+                                    <div class="container-fluid bg-dark">
+                                        <div class="container-fluid d-flex justify-content-between align-items-center px-0">
+                                            <div class="links">
+                                                <a href="#" class="text-light mr-1">처음으로</a>
+                                            </div>
+                                            <div class="top-btn bg-primary">
+                                                <a href="#" class="text-light d-block text-center" style="width:40px; height: 40px; line-height: 40px;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container-fluid bg-primary">
+                                        <div class="container">
+                                            <p class="brand text-light">달무리 (청년문화 기획사)</p>
+                                            <p class="info text-light">대표자 : 문준혁 사업자등록번호 : 679-88-05193 주소 : 광주광역시 동구문화전당로5 3층 전화 : 062-362-7797 이메일 : us@aicc.com</p>
+                                            <nav class="under-nav">
+                                                <ul class="d-flex">
+                                                    <li><a href="#" class="text-light">이용약관</a></li>
+                                                    <li><a href="#" class="text-light">개인정보취급방침</a></li>
+                                                    <li><a href="#" class="text-light">무단이메일수집거부</a></li>
+                                                    <li><a href="#" class="text-light">환불정책</a></li>
+                                                    <li><a href="#" class="text-light">자주묻는질문</a></li>
+                                                </ul>
+                                            </nav>
+                                            <p class="copy text-light">&copy; ai codecamp. 2023. all rights reserved.</p>
+                                        </div>
+                                    </div>
+                                </footer>
+                                <!-- 2. 부트스트랩 js CDN 연결 -->
+                                <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+                                <!--
 			  <script
 				  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
 				  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
 				  crossorigin="anonymous"
 			  ></script>-->
-			  <script
-				  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-				  integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-				  crossorigin="anonymous"
-			  ></script>
-			  <script>
-				  $("#search-box").css({
-					  position: "fixed",
-					  top: "-120px",
-					  width: "100%",
-					  background: "white",
-					  zIndex: 100
-				  })
-				  // 타겟.메소드1().메소드2().메소드3() <-- [jQuery] 체이닝
-				  $(function () {                
-					  // 검색 버튼 누르면, 검색창이 포함된 헤더?를 호출한다.
-					  $("#search").click(function(e){ // e : event 정보를 갖고 있는 이벤트 객체 (DOM)
-						  e.preventDefault(); // DOM 요소가 갖는 기본기능을 해제(ex.a 태그 클릭시 페이지 상단 이동 기본기능)
-						  //$("#search-box").show(); // 또는 .hide()                    
-						  $("#search-box").animate({
-							  top: 0
-						  }); // jQuery Easing Plug-in : 다양한 animation 구사
-					  })
-		  
-					  // 윈도우 스크롤 이벤트 --> 스크롤에 대한 이벤트 + @
-					  $(window).scroll(function(){
-						  checkScroll();
-					  });
-					  function checkScroll(){
-						  var cst = $(window).scrollTop(); // current scroll top
-						  if(cst > 150) {
-							  $("header").css({                            
-								  width: "100%",
-								  zIndex: 99,
-								  top: "-120px"
-							  });
-							  setTimeout(function(){
-								  $("header").addClass("moving-header"); // 클래스 추가 메소드  vs   .removeClass() 제거 메소드
-							  },2000); // 지정시간이 지나고 할일 실행하고 종료되는 메소드
-						  } else  {
-							  $("header").removeClass("moving-header");
-							  $("header").css({                            
-								  width: "100%",
-								  zIndex: 99,
-								  top: 0,
-								  boxShadow: "none"
-							  });
-							  $
-						  }
-					  }
-					  //$("#search").on(); // 이벤트가 여러가지를 등록 핸들러
-		  
-		  
-		  
-					  // li icon에 마우스 오버,아웃하면 각각의 상태를 바꾸는 스크립트
-					  // .hover(),          .children(), .next(), .prev(), .addClass(),    .removeClass()
-					  // 마우스 오버/아웃(), 자식(),      동생(),  형(),   클래스 추가(),   클래스 제거()
-					  // console.log($(".li-icon img").first());
-					  // $(".active > ul > li").hover(
-					  //     function () {},
-					  //     function () {}
-					  // );
-				  });
-			  </script>
-		  </body>
-		  </html>
+                                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+                                <script>
+                                    $("#search-box").css({
+                                        position: "fixed",
+                                        top: "-120px",
+                                        width: "100%",
+                                        background: "white",
+                                        zIndex: 100
+                                    })
+                                    // 타겟.메소드1().메소드2().메소드3() <-- [jQuery] 체이닝
+                                    $(function() {
+                                        // 검색 버튼 누르면, 검색창이 포함된 헤더?를 호출한다.
+                                        $("#search").click(function(e) { // e : event 정보를 갖고 있는 이벤트 객체 (DOM)
+                                            e.preventDefault(); // DOM 요소가 갖는 기본기능을 해제(ex.a 태그 클릭시 페이지 상단 이동 기본기능)
+                                            //$("#search-box").show(); // 또는 .hide()                    
+                                            $("#search-box").animate({
+                                                top: 0
+                                            }); // jQuery Easing Plug-in : 다양한 animation 구사
+                                        })
+
+                                        // 윈도우 스크롤 이벤트 --> 스크롤에 대한 이벤트 + @
+                                        $(window).scroll(function() {
+                                            checkScroll();
+                                        });
+
+                                        function checkScroll() {
+                                            var cst = $(window).scrollTop(); // current scroll top
+                                            if (cst > 150) {
+                                                $("header").css({
+                                                    width: "100%",
+                                                    zIndex: 99,
+                                                    top: "-120px"
+                                                });
+                                                setTimeout(function() {
+                                                    $("header").addClass("moving-header"); // 클래스 추가 메소드  vs   .removeClass() 제거 메소드
+                                                }, 2000); // 지정시간이 지나고 할일 실행하고 종료되는 메소드
+                                            } else {
+                                                $("header").removeClass("moving-header");
+                                                $("header").css({
+                                                    width: "100%",
+                                                    zIndex: 99,
+                                                    top: 0,
+                                                    boxShadow: "none"
+                                                });
+                                                $
+                                            }
+                                        }
+                                        //$("#search").on(); // 이벤트가 여러가지를 등록 핸들러
+
+
+
+                                        // li icon에 마우스 오버,아웃하면 각각의 상태를 바꾸는 스크립트
+                                        // .hover(),          .children(), .next(), .prev(), .addClass(),    .removeClass()
+                                        // 마우스 오버/아웃(), 자식(),      동생(),  형(),   클래스 추가(),   클래스 제거()
+                                        // console.log($(".li-icon img").first());
+                                        // $(".active > ul > li").hover(
+                                        //     function () {},
+                                        //     function () {}
+                                        // );
+                                    });
+                                </script>
+</body>
+
+</html>
