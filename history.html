@@ -199,7 +199,7 @@ color: black;
       }
        -->
 </style>
-	  </style>
+	
     <h1 class="d-none">달무리</h1>
     <header style="background: gray">
     <div class="container-fluid">
@@ -217,7 +217,7 @@ color: black;
                <div class="dropdown-menu">
                  <a class="dropdown-item" href="about.html">소개</a>
                  <a class="dropdown-item" href="group.html">조직도</a>
-                 <a class="dropdown-item" href="#">Something else here</a>
+                 <a class="dropdown-item" href="history.html">연혁</a>
                  <div class="dropdown-divider"></div>
                  <a class="dropdown-item" href="#">Separated link</a>
 
@@ -240,7 +240,7 @@ color: black;
              <li class="nav-item dropdown">
                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="bussion.html" role="button" aria-expanded="false">주요사업</a>
                  <div class="dropdown-menu">
-                   <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="programreview.html">주요사업 후기</a>
                    <a class="dropdown-item" href="#">Another action</a>
                    <a class="dropdown-item" href="#">Something else here</a>
                    <div class="dropdown-divider"></div>
@@ -276,96 +276,72 @@ color: black;
     </div>
 	 </div>
    </header>
-   <section class="courses">
-	 <div class="container-fluid">
-	   <div class="container">
-		 <div class="row flex-column ">
-		   <h2 class="text-left text-light pt-5">
-            <h2>
-                연혁
-                <small class="text-muted">달무리는 청년들이 존중받는 사회를 만듭니다.</small>
-              </h2>
-             <p></p>
-		   </h2>
-           <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <div class="btn-group-vertical" role="group" aria-label="Year Menu">
-                  <button type="button" class="btn btn-secondary" onclick="window.location.href='/2021'">2021</button>
-                  <button type="button" class="btn btn-secondary active" onclick="window.location.href='/2020'">2020</button>
-                  <button type="button" class="btn btn-secondary" onclick="window.location.href='/2019'">2019</button>
-                  <button type="button" class="btn btn-secondary" onclick="window.location.href='/2018'">2018</button>
-                  <button type="button" class="btn btn-secondary" onclick="window.location.href='/2017'">2017</button>
-                  <button type="button" class="btn btn-secondary" onclick="window.location.href='/2016'">2016</button>
-                </div>
-              </div>
+  </head>
+  <body>
+    <div class="container">
+      <h1>연혁</h1>
+      <div class="row">
+        <div class="col-3">
+          <div class="list-group" id="year-list" role="tablist">
+            <a
+              class="list-group-item list-group-item-action active"
+              data-toggle="list"
+              href="#year-2020"
+              role="tab"
+              >2020</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              data-toggle="list"
+              href="#year-2019"
+              role="tab"
+              >2019</a
+            >
+            <a
+              class="list-group-item list-group-item-action"
+              data-toggle="list"
+              href="#year-2018"
+              role="tab"
+              >2018</a
+            >
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="tab-content" id="year-content">
+            <div
+              class="tab-pane fade show active year"
+              id="year-2020"
+              role="tabpanel"
+            >
+              <h3>2020년 연혁</h3>
+              <p>내용1</p>
+              <p>내용2</p>
+              <p>내용3</p>
+            </div>
+            <div class="tab-pane fade year" id="year-2019" role="tabpanel">
+              <h3>2019년 연혁</h3>
+              <p>내용1</p>
+              <p>내용2</p>
+              <p>내용3</p>
+            </div>
+            <div class="tab-pane fade year" id="year-2018" role="tabpanel">
+              <h3>2018년 연혁</h3>
+              <p>내용1</p>
+              <p>내용2</p>
+              <p>내용3</p>
             </div>
           </div>
-          <li class="event">
-            <div class="date">2016년</div>
-            <div class="description">
-              <h2>제 1회 SYGC</h2>
-              <p>첫번째 SYGC 대회 개최</p>
-            </div>
-          </li>
-          <li class="event">
-            <div class="date">2017년</div>
-            <div class="description">
-              <h2>제 2회 SYGC</h2>
-              <p>SYGC 대회 개최</p>
-            </div>
-          </li>
-          <li class="event">
-            <div class="date">2018년</div>
-            <div class="description">
-              <h2>제 3회 SYGC</h2>
-              <p>SYGC 대회 개최</p>
-            </div>
-          </li>
-          <li class="event">
-            <div class="date">2019년</div>
-            <div class="description">
-              <h2>제 4회 SYGC</h2>
-              <p>SYGC 대회 개최</p>
-            </div>
-          </li>
-          <li class="event">
-            <div class="
-            <div class="container">
-                <ul class="timeline">
-                  <li class="event">
-                    <div class="timeline-badge"><i class="fas fa-briefcase"></i></div>
-                    <div class="timeline-panel">
-                      <div class="timeline-heading">
-                        <h4 class="timeline-title">2020년</h4>
-                      </div>
-                      <div class="timeline-body">
-                        <p>온라인 대학생 게임 경연대회 개최</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="event">
-                    <div class="card border-0 mb-4">
-                      <div class="row no-gutters">
-                        <div class="col-md-2 order-2 order-md-1">
-                          <div class="card-body text-center">
-                            <div class="event-date">
-                              <span class="day">10</span>
-                              <span class="month">9월</span>
-                              <span class="year">2020</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-10 order-1 order-md-2">
-                          <div class="card-body pl-0">
-                            <h5 class="card-title">캠퍼스 내 게임 대회 개최</h5>
-                            <p class="card-text">2020년 9월 10일, 캠퍼스 내 게임 대회가 열렸습니다. 다양한 게임에 참가한 학생들은 열정과 경쟁심을 뽐내며 즐거운 대회를 즐겼습니다.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-<footer>
+        </div>
+      </div>
+    </div>>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha384-/dXQOVZaW2lY9Xg6jHJyB/CVLHXaUGLz8wNLkNjRSJoQBgwMOTO5BkR/0aP5wo5y"
+      crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+   <footer>
     <div class="container-fluid bg-dark">
       <div class="container d-flex justify-content-between align-items-center px-0">
         <div class="links">
