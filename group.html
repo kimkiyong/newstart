@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=d410.66pxice30idth,670.66px10.66pxitial-scal670.66px1.0" />
-    <title>조직도</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>소개</title>
     <!--  1. 부트스트랩 css CDN 연결 -->
     <link
       rel="stylesheet"
@@ -13,75 +13,114 @@
       crossorigin="anonymous"
     />
     <style>
-      /* 부트스트랩 container 최대폭 늘리기 */
-      /* 부트스트랩5에서 1400px 크기를 지원하지만, 4버전에서도 충분히 늘려줄수 있음 */
       @media screen and (max-width: 1440px) {
-          .container {
-              max-width: 1440px;
-          }
-      }
-
-      @media screen and (max-width: 1440px) {
-          .container {
-              max-width: 1320px;
-          }
-      }
-
-      ul,
-      ol {
-          list-style: none;
-      }
-
-      #gnb,
-      #etc {
-          column-gap: 1rem;
-          margin: 0;
-          padding: 0;
-      }
-
-      #bar {
-          background: #5ba3ff;
-          height: 5px;
-          font-size: 0;
-      }
-
-      header::after {
-          content: "";
-          display: block;
-          width: 100%;
-          height: 1px;
-          background: #5ba3ff;
-      }
-
-      section.courses {
-          position: relative;
-          background: #0170ff;
-          height: 700px;
-
-      }
-
-      /*
-  section.courses::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-    clip-path: polygon(0 0, 0 100%, 100% 100%, 0 calc(100% - 180px));
-  }
-  */
-      .short-bar {
-          border: 0;
-          width: 60px;
-          height: 3px;
-          background: #f1f1f1;
-      }
-
-  </style>
-
+         .container {
+             max-width: 1440px;
+         }
+     }
+     @media screen and (max-width: 1440px) {
+         .container {
+             max-width: 1320px;
+         }
+     }
+     ul,
+     ol {
+         list-style: none;
+         margin: 0;
+         padding: 0;
+     }
+     #gnb,
+     #etc {
+         column-gap: 1rem;
+         margin: 0;
+         padding: 0;
+     }
+     #bar {
+         background: #5ba3ff;
+         height: 5px;
+         font-size: 0;
+     }
+     header::after {
+         content: "";
+         display: block;
+         width: 100%;
+         height: 1px;
+         background: #5ba3ff;
+     }
+     /*
+     section.courses {
+         position: relative;
+         background: #0170ff;
+         height: 700px;
+     }
+     /*section.courses::after {
+         /* 섹션 하단 폴리곤(=다각형) 
+         content: "";
+         display: block;
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         height: 100%;
+         background: white;
+         clip-path: polygon(0 0, 0 100%, 100% 100%, 0 calc(100% - 180px));
+     }*/
+     .short-bar {
+         border: 0;
+         width: 60px;
+         height: 3px;
+         background: #f1f1f1;
+     }
+     #hot_items,
+     #event_items,
+     #latest_items {
+         column-gap: 2rem;
+         position: relative;
+         z-index: 10;
+         padding: 0;
+         margin: 0;
+         max-width: 80%;
+         margin: 0 auto;
+     }
+     #hot_items > li,
+     #event_items > li,
+     #latest_items > li {
+         border-radius: 5px;
+         overflow: hidden;
+         background: rgba(241, 241, 241, 0.1);
+         padding: 1.25rem 1rem;
+         /* shadow */
+         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+     }
+     #hot_items > li:hover,
+     #event_items > li:hover,
+     #latest_items > li:hover {
+         background: rgba(241, 241, 241, 0.7);
+     }
+     /* .mt-15 {
+ margin-top: 15rem;
+} */
+.card-header-title{
+ font-size: 1rem;
+ font-weight: bolder;
+}
+.card-header-subtitle{
+ font-size: 1.25rem;
+ font-weight: bold;
+}
+.card-title {
+ font-size: 1rem
+}
+.tags {
+ bottom: 10%;
+}
+#xs-box {
+ position: relative;
+ z-index: 100;
+ box-shadow:0 0 15px rgba(0, 0, 0, 0.25);
+ padding: 0;
+}
+ </style>
 <h1 class="d-none">달무리</h1>
     <header style="background: gray">
     <div class="container-fluid">
@@ -91,351 +130,380 @@
       </div>
 
       
-      
-
-          <ul class="nav nav-tabs">
-             <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="about.html" role="button" aria-expanded="false">소개</a>
-               <div class="dropdown-menu">
-                 <a class="dropdown-item" href="about.html">소개</a>
-                 <a class="dropdown-item" href="group.html">조직도</a>
-                 <a class="dropdown-item" href="history.html">연혁</a>
-                 <div class="dropdown-divider"></div>
-                 <a class="dropdown-item" href="#">추가</a>
+      <ul class="nav nav-tabs">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="about.html" role="button" aria-expanded="false">소개</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="about.html">소개</a>
+            <a class="dropdown-item" href="#">활동소개</a>
+            <a class="dropdown-item" href="group.html">조직도</a>
+            <a class="dropdown-item" href="history.html">연혁</a>
 
 
-               </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="program.html" role="button" aria-expanded="false">프로그램</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="program.html">프로그램</a>
-                 <a class="dropdown-item" href="programreview.html">프로그램 후기</a>
-                  <a class="dropdown-item" href="#">추가2</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">추가3</a>
-                </div>
-                 
+          </div>
+       </li>
+       <li class="nav-item dropdown">
+         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="program.html" role="button" aria-expanded="false">프로그램</a>
+         <div class="dropdown-menu">
+           <a class="dropdown-item" href="program.html">프로그램</a>
+           <a class="dropdown-item" href="program.html">안내</a>
+           <a class="dropdown-item" href="program.html">신청</a>
+          <a class="dropdown-item" href="programreview.html">프로그램 후기</a>          </div>         
 
-                 
-             </li>
-             <li class="nav-item dropdown">
-                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="bussion.html" role="button" aria-expanded="false">주요사업</a>
-                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">추가1</a>
-                   <a class="dropdown-item" href="#">추가2</a>
-                   <a class="dropdown-item" href="#">추가3</a>
-                   <div class="dropdown-divider"></div>
-                   <a class="dropdown-item" href="">추가4</a>
-                 </div>
-             </li>
-             <li class="nav-item">
-                 <a class="nav-link"href="notice.html">공지사항</a>
-             
-         </li>
-     </ul>
-     <nav class="etc-nav col-lg-5 col-lg-5 col-md-4 col-sm-12">
-      <ul id="etc" class="d-flex justify-content-end">
-      <li><a href="#" class="text-light">검색</a></li>
-      <li><a href="#" class="text-light">고객센터</a></li>
-      <li><a href="#" class="text-light">로그인</a></li>
-      </ul>
-    </nav>
-    </div>
+            
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="bussion.html" role="button" aria-expanded="false">협력단체</a>
+            <div class="dropdown-menu">
+             <a class="dropdown-item" href="#">활동후기</a>
+              <a class="dropdown-item" href="#">추가2</a>
+              <a class="dropdown-item" href="#">추가3</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="">추가4</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"href="notice.html">공지사항</a>
+        
+    </li>
+</ul>
+<nav class="etc-nav col-lg-5 col-lg-5 col-md-4 col-sm-12">
+ <ul id="etc" class="d-flex justify-content-end">
+ <li><a href="#" class="text-light">검색</a></li>
+ <li><a href="#" class="text-light">고객센터</a></li>
+ <li><a href="#" class="text-light">로그인</a></li>
+ </ul>
+</nav>
+</div>
+</div>
+ <div class="container-fluid" id="search-box">
+  <div class="container">
+   <div class="row">
+      <div class="col-1" id="bar">선</div>
+   </div>
+ </div>
+     </nav>	   </div>
   </div>
-<div class="container-fluid" id="search-box">
-<div class="container">
-<div class="row">
-   <div class="col-1" id="bar">선</div>
-</div>
-</div>
- <div class="container">
-    <div class="row">
-        <div class="col-1" id="bar">bar</div>
-    </div>
-</div>
-</div>
 </header>
 <div class="container">
   <div class="row">
-    <div class="col-md-4 mb-4">
-      <div class="card" style="width: 20rem;">
-        <img src="image/KY1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title name gm">최성</h5>
-          <div class="card-text txt_box">
-            <div class="card-text-box">고객의 니즈에 초점을 맞추고 최선을 다해 결과를 이뤄내는 것이 제가 추구하는 가치입니다.</div>
-          </div>
-          <br>
-          <ul class="contect">
-            <img src="image/telephone.png" class="card-img-top" alt="...\\\" style="width: 30px; height: 30px;"> 010-2222-2222
-          </ul>
-          <ul class="contect">
-            <img src="image/email.png" class="card-img-top" alt="...\\\" style="width: 30px; height: 30px;"> 13579@ijkl.com
-          </ul>
-          <dl>
-            <span class="badge badge-primary">업무</span>
-            <ul class="bul01">
-              <li>· 사업개발 총괄</li>
-              <li>· 고객관리 및 매출 증대</li>
-              <li>· 제품 기획 및 마케팅 전략 수립</li>
-            </ul>
-          </dl>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-4">
-      <div class="card" style="width: 20rem;">
-        <img src="image/KY2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title name gm">이지은</h5>
-          <div class="card-text txt_box">
-            <div class="card-text-box">업무 경험을 토대로 고객 만족을 위한 최고의 서비스 제공을 약속드립니다.</div>
-          </div>
-          <br>
-          <ul class="contect">
-            <img src="image/telephone.png" class="card-img-top" alt="...\\\" style="width: 30px; height: 30px;"> 010-3333-3333
-          </ul>
-          <ul class="contect">
-            <img src="image/email.png" class="card-img-top" alt="...\\\" style="width: 30px; height: 30px;"> abcdefg@gmail.com
-          </ul>
-          <dl>
-            <span class="badge badge-primary">업무</span>
-            <ul class="bul01">
-              <li>· 고객 관리</li>
-              <li>· 서비스 개선</li>
-              <li>· 영업 전략 수립</li>
-            </ul>
-          </dl>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-4">
-      <div class="card" style="width: 20rem;">
-        <div class="card" style="width: 20rem;">
-          <img src="image/KY3.jpg" class="card-img-top" alt="...">
+    <div class="col-md-4">
+      <div class="card-deck">
+        <div class="card text-center">
           <div class="card-body">
-            <h5 class="card-title name gm">홍길동</h5>
-            <div class="card-text txt_box">
-              <div class="card-text-box">새로운 아이디어를 창출하며 끊임없이 도전하는 것을 모토로 삼고 있습니다.</div>
+            <img src="image/KY1.jpg" alt="" class="card-img-top">
+            <h5 class="card-title font-weight-bold">어니</h5>
+            <div class="card-text">
+              자신이 원하는 것을 쫓으며 살 때, 그 끝에 행복이 있다고 믿습니다.
             </div>
-            <br>
-            <ul class="contect">
-              <img src="image/telephone.png" class="card-img-top" alt="...\" style="width: 30px; height: 30px;"> 010-3333-3333
+            <ul class="list-unstyled mt-4 mb-0">
+              <li><i class="fas fa-phone mr-2"></i>070-7733-9852</li>
+              <li><i class="far fa-envelope mr-2"></i>akira0703@gmyouthzone.org</li>
             </ul>
-            <ul class="contect">
-              <img src="image/email.png" class="card-img-top" alt="...\" style="width: 30px; height: 30px;"> honggildong@gmail.com
+            <hr>
+            <ul class="list-unstyled text-left mt-3">
+            <span class="badge badge-dark">업무</span>
+              <li>청년동 업무 총괄</li>
+              <li>중장기 사업 운영계획 수립</li>
+              <li>유관기관 네트워크 구축</li>
             </ul>
-            <dl>
-              <span class="badge badge-primary">업무</span>
-              <ul class="bul01">
-                <li>· 신규 사업 기획 및 개발</li>
-                <li>· 기술 개발 및 혁신</li>
-                <li>· 인재 육성 및 팀 빌딩</li>
-              </ul>
-            </dl>
           </div>
         </div>
+        <!-- Add 2 more similar cards here to have a total of 9 cards in a row -->
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="card" style="width: 20rem;">
-          <img src="image/KY4.jpg" class="card-img-top" alt="...">
+    </div>      
+    <div class="col-md-4">
+      <div class="card-deck">
+        <div class="card text-center">
           <div class="card-body">
-            <h5 class="card-title name gm">박영희</h5>
-            <div class="card-text txt_box">
-              <div class="card-text-box">디자인과 기술의 조화로 높은 퀄리티의 제품을 만드는 것을 목표로 하고 있습니다.</div>
+            <img src="image/KY1.jpg" alt="" class="card-img-top">
+            <h5 class="card-title font-weight-bold">어니</h5>
+            <div class="card-text">
+              자신이 원하는 것을 쫓으며 살 때, 그 끝에 행복이 있다고 믿습니다.
             </div>
-            <br>
-            <ul class="contect">
-              <img src="image/telephone.png" class="card-img-top" alt="...\" style="width: 30px; height: 30px;"> 010-4444-4444
+            <ul class="list-unstyled mt-4 mb-0">
+              <li><i class="fas fa-phone mr-2"></i>070-7733-9852</li>
+              <li><i class="far fa-envelope mr-2"></i>akira0703@gmyouthzone.org</li>
             </ul>
-            <ul class="contect">
-              <img src="image/email.png" class="card-img-top" alt="...\" style="width: 30px; height: 30px;"> parkyounghee@gmail.com
+            <hr>
+            <ul class="list-unstyled text-left mt-3">
+            <span class="badge badge-dark">업무</span>
+              <li>청년동 업무 총괄</li>
+              <li>중장기 사업 운영계획 수립</li>
+              <li>유관기관 네트워크 구축</li>
             </ul>
-            <dl>
-              <span class="badge badge-primary">업무</span>
-              <ul class="bul01">
-                <li>· 제품 디자인</li>
-                <li>· UI/UX 개발</li>
-                <li>· 프로젝트 관리</li>
-              </ul>
-            </dl>
           </div>
         </div>
+        <!-- Add 2 more similar cards here to have a total of 9 cards in a row -->
       </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card" style="width: 20rem;">
-            <img src="image/KY5.jpg" class="card-img-top" alt="...">
+    </div> 
+    <div class="col-md-4">
+      <div class="card-deck">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="image/KY1.jpg" alt="" class="card-img-top">
+            <h5 class="card-title font-weight-bold">어니</h5>
+            <div class="card-text">
+              자신이 원하는 것을 쫓으며 살 때, 그 끝에 행복이 있다고 믿습니다.
+            </div>
+            <ul class="list-unstyled mt-4 mb-0">
+              <li><i class="fas fa-phone mr-2"></i>070-7733-9852</li>
+              <li><i class="far fa-envelope mr-2"></i>akira0703@gmyouthzone.org</li>
+            </ul>
+            <hr>
+            <ul class="list-unstyled text-left mt-3">
+            <span class="badge badge-dark">업무</span>
+              <li>청년동 업무 총괄</li>
+              <li>중장기 사업 운영계획 수립</li>
+              <li>유관기관 네트워크 구축</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Add 2 more similar cards here to have a total of 9 cards in a row -->
+      </div>
+    </div> 
+    
+
+    <div class="col-md-4">
+      <div class="card-deck">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="image/KY1.jpg" alt="" class="card-img-top">
+            <h5 class="card-title font-weight-bold">어니</h5>
+            <div class="card-text">
+              자신이 원하는 것을 쫓으며 살 때, 그 끝에 행복이 있다고 믿습니다.
+            </div>
+            <ul class="list-unstyled mt-4 mb-0">
+              <li><i class="fas fa-phone mr-2"></i>070-7733-9852</li>
+              <li><i class="far fa-envelope mr-2"></i>akira0703@gmyouthzone.org</li>
+            </ul>
+            <hr>
+            <ul class="list-unstyled text-left mt-3">
+            <span class="badge badge-dark">업무</span>
+              <li>청년동 업무 총괄</li>
+              <li>중장기 사업 운영계획 수립</li>
+              <li>유관기관 네트워크 구축</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Add 2 more similar cards here to have a total of 9 cards in a row -->
+      </div>
+    </div>      
+    <div class="col-md-4">
+      <div class="card-deck">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="image/KY1.jpg" alt="" class="card-img-top">
+            <h5 class="card-title font-weight-bold">어니</h5>
+            <div class="card-text">
+              자신이 원하는 것을 쫓으며 살 때, 그 끝에 행복이 있다고 믿습니다.
+            </div>
+            <ul class="list-unstyled mt-4 mb-0">
+              <li><i class="fas fa-phone mr-2"></i>070-7733-9852</li>
+              <li><i class="far fa-envelope mr-2"></i>akira0703@gmyouthzone.org</li>
+            </ul>
+            <hr>
+            <ul class="list-unstyled text-left mt-3">
+            <span class="badge badge-dark">업무</span>
+              <li>청년동 업무 총괄</li>
+              <li>중장기 사업 운영계획 수립</li>
+              <li>유관기관 네트워크 구축</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Add 2 more similar cards here to have a total of 9 cards in a row -->
+      </div>
+    </div> 
+    <div class="col-md-4">
+      <div class="card-deck">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="image/KY1.jpg" alt="" class="card-img-top">
+            <h5 class="card-title font-weight-bold">어니</h5>
+            <div class="card-text">
+              자신이 원하는 것을 쫓으며 살 때, 그 끝에 행복이 있다고 믿습니다.
+            </div>
+            <ul class="list-unstyled mt-4 mb-0">
+              <li><i class="fas fa-phone mr-2"></i>070-7733-9852</li>
+              <li><i class="far fa-envelope mr-2"></i>akira0703@gmyouthzone.org</li>
+            </ul>
+            <hr>
+            <ul class="list-unstyled text-left mt-3">
+            <span class="badge badge-dark">업무</span>
+              <li>청년동 업무 총괄</li>
+              <li>중장기 사업 운영계획 수립</li>
+              <li>유관기관 네트워크 구축</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Add 2 more similar cards here to have a total of 9 cards in a row -->
+      </div>
+    </div> 
+    <div class="col-md-4">
+        <div class="card-deck">
+          <div class="card text-center">
             <div class="card-body">
-              <h5 class="card-title name gm">이지현</h5>
-              <div class="card-text txt_box">
-              <div class="card-text-box">최상의 팀워크와 함께 효율적이고 효과적인 결과를 도출하는 것을 목표로 하고 있습니다.</div>
+              <img src="image/KY1.jpg" alt="" class="card-img-top">
+              <h5 class="card-title font-weight-bold">어니</h5>
+              <div class="card-text">
+                자신이 원하는 것을 쫓으며 살 때, 그 끝에 행복이 있다고 믿습니다.
               </div>
-              <br>
-              <ul class="contect">
-              <img src="image/telephone.png" class="card-img-top" alt="...\\\" style="width: 30px; height: 30px;"> 010-1234-5678
+              <ul class="list-unstyled mt-4 mb-0">
+                <li><i class="fas fa-phone mr-2"></i>070-7733-9852</li>
+                <li><i class="far fa-envelope mr-2"></i>akira0703@gmyouthzone.org</li>
               </ul>
-              <ul class="contect">
-              <img src="image/email.png" class="card-img-top" alt="...\\\" style="width: 30px; height: 30px;"> ezhyun@gmail.com
+              <hr>
+              <ul class="list-unstyled text-left mt-3">
+              <span class="badge badge-dark">업무</span>
+                <li>청년동 업무 총괄</li>
+                <li>중장기 사업 운영계획 수립</li>
+                <li>유관기관 네트워크 구축</li>
               </ul>
-              <dl>
-              <span class="badge badge-primary">업무</span>
-              <ul class="bul01">
-              <li>· 프로젝트 관리</li>
-              <li>· 팀 조직 및 운영</li>
-              <li>· 업무 프로세스 개선</li>
-              </ul>
-              </dl>
-              </div>
-              </div>
-              </div>
-              <div class="col-md-4 mb-4">
-              <div class="card" style="width: 20rem;">
-              <img src="image/KY6.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-              <h5 class="card-title name gm">이태환</h5>
-              <div class="card-text txt_box">
-              <div class="card-text-box">계획적이고 체계적으로 일하는 것을 지향하며, 적극적인 태도로 업무를 추진하고 있습니다.</div>
-              </div>
-              <br>
-              <ul class="contect">
-              <img src="image/telephone.png" class="card-img-top" alt="...\\\" style="width: 30px; height: 30px;"> 010-5555-5555
-              </ul>
-              <ul class="contect">
-              <img src="image/email.png" class="card-img-top" alt="...\\\" style="width: 30px; height: 30px;"> thaun@naver.com
-              </ul>
-              <dl>
-              <span class="badge badge-primary">업무</span>
-              <ul class="bul01">
-              <li>· 영업 및 마케팅 전략 수립</li>
-              <li>· 고객 관리</li>
-              <li>· 신규 비즈니스 모델 개발</li>
-              </ul>
-              </dl>
-              </div>
-              </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                <div class="card" style="width: 20rem;">
-                <img src="image/KY7.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title name gm">김수민</h5>
-                <div class="card-text txt_box">
-                <div class="<div class="card-text-box">고객의 만족도를 최우선으로 생각하며, 책임감 있게 일을 진행하는 것이 저의 모토입니다.</div>
-              </div>
-              <br>
-              <ul class="contect">
-              <img src="image/telephone.png" class="card-img-top" alt="...\\\" style="width: 30px; height: 30px;"> 010-3333-3333
-              </ul>
-              <ul class="contect">
-              <img src="image/email.png" class="card-img-top" alt="...\\\" style="width: 30px; height: 30px;"> abcdefg@gmail.com
-              </ul>
-              <dl>
-              <span class="badge badge-primary">업무</span>
-              <ul class="bul01">
-              <li>· 고객 서비스 및 지원</li>
-              <li>· 제품 관리 및 개선</li>
-              <li>· 마케팅 전략 수립</li>
-              </ul>
-              </dl>
-              </div>
-              </div>
-              </div>
-              
-              
-              
-              
-              
-  
-  <div class="container-fluid bg-primary">
-      <div class="container">
-          <p class="brand text-light">달무리 (청년문화 기획사)</p>
-          <p class="info text-light">대표자 : 문준혁 사업자등록번호 : 679-88-05193 주소 : 광주광역시 동구문화전당로5 3층 전화 : 062-362-7797 이메일 : us@aicc.com</p>
-          <nav class="under-nav">
-              <ul class="d-flex">
-                  <li><a href="#" class="text-light">이용약관</a></li>
-                  <li><a href="#" class="text-light">개인정보취급방침</a></li>
-                  <li><a href="#" class="text-light">무단이메일수집거부</a></li>
-                  <li><a href="#" class="text-light">환불정책</a></li>
-                  <li><a href="#" class="text-light">자주묻는질문</a></li>
-              </ul>
-          </nav>
-          <p class="copy text-light">&copy; ai codecamp. 2023. all rights reserved.</p>
+            </div>
+          </div>
+          <!-- Add 2 more similar cards here to have a total of 9 cards in a row -->
+        </div>
+      </div>      
+      <div class="col-md-4">
+      <div class="card-deck">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="image/KY1.jpg" alt="" class="card-img-top">
+            <h5 class="card-title font-weight-bold">어니</h5>
+            <div class="card-text">
+              자신이 원하는 것을 쫓으며 살 때, 그 끝에 행복이 있다고 믿습니다.
+            </div>
+            <ul class="list-unstyled mt-4 mb-0">
+              <li><i class="fas fa-phone mr-2"></i>070-7733-9852</li>
+              <li><i class="far fa-envelope mr-2"></i>akira0703@gmyouthzone.org</li>
+            </ul>
+            <hr>
+            <ul class="list-unstyled text-left mt-3">
+            <span class="badge badge-dark">업무</span>
+              <li>청년동 업무 총괄</li>
+              <li>중장기 사업 운영계획 수립</li>
+              <li>유관기관 네트워크 구축</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Add 2 more similar cards here to have a total of 9 cards in a row -->
       </div>
-  </div>
-</footer>
-                              <!-- 2. 부트스트랩 js CDN 연결 -->
-      <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    </div> 
+    <div class="col-md-4">
+      <div class="card-deck">
+        <div class="card text-center">
+          <div class="card-body">
+            <img src="image/KY1.jpg" alt="" class="card-img-top">
+            <h5 class="card-title font-weight-bold">어니</h5>
+            <div class="card-text">
+              자신이 원하는 것을 쫓으며 살 때, 그 끝에 행복이 있다고 믿습니다.
+            </div>
+            <ul class="list-unstyled mt-4 mb-0">
+              <li><i class="fas fa-phone mr-2"></i>070-7733-9852</li>
+              <li><i class="far fa-envelope mr-2"></i>akira0703@gmyouthzone.org</li>
+            </ul>
+            <hr>
+            <ul class="list-unstyled text-left mt-3">
+            <span class="badge badge-dark">업무</span>
+              <li>청년동 업무 총괄</li>
+              <li>중장기 사업 운영계획 수립</li>
+              <li>유관기관 네트워크 구축</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Add 2 more similar cards here to have a total of 9 cards in a row -->
+      </div>
+    </div> 
+</div>
+</div>
+</div>
+</div>   
 
-      <!--
-<script
-src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-crossorigin="anonymous"
-></script>-->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-      <script>
-          $("#search-box").css({
-              position: "fixed",
-              top: "-120px",
-              width: "100%",
-              background: "white",
-              zIndex: 100
-          })
-          // 타겟.메소드1().메소드2().메소드3() <-- [jQuery] 체이닝
-          $(function() {
-              // 검색 버튼 누르면, 검색창이 포함된 헤더?를 호출한다.
-              $("#search").click(function(e) { // e : event 정보를 갖고 있는 이벤트 객체 (DOM)
-                  e.preventDefault(); // DOM 요소가 갖는 기본기능을 해제(ex.a 태그 클릭시 페이지 상단 이동 기본기능)
-                  //$("#search-box").show(); // 또는 .hide()                    
-                  $("#search-box").animate({
-                      top: 0
-                  }); // jQuery Easing Plug-in : 다양한 animation 구사
-              })
-
-              // 윈도우 스크롤 이벤트 --> 스크롤에 대한 이벤트 + @
-              $(window).scroll(function() {
-                  checkScroll();
-              });
-
-              function checkScroll() {
-                  var cst = $(window).scrollTop(); // current scroll top
-                  if (cst > 150) {
-                      $("header").css({
-                          width: "100%",
-                          zIndex: 99,
-                          top: "-120px"
-                      });
-                      setTimeout(function() {
-                          $("header").addClass("moving-header"); // 클래스 추가 메소드  vs   .removeClass() 제거 메소드
-                      }, 2000); // 지정시간이 지나고 할일 실행하고 종료되는 메소드
-                  } else {
-                      $("header").removeClass("moving-header");
-                      $("header").css({
-                          width: "100%",
-                          zIndex: 99,
-                          top: 0,
-                          boxShadow: "none"
-                      });
-                      $
-                  }
-              }
-              //$("#search").on(); // 이벤트가 여러가지를 등록 핸들러
+              <footer>
+                <div class="container-fluid bg-dark">
+                  <div class="container d-flex justify-content-between align-items-center px-0">
+                    <div class="links">
+                      <a href="#" class="text-light mr-1">처음으로</a>
+                    </div>
+                    <div class="top-btn bg-primary">
+                      <a href="#" class="text-light d-block text-center" style="width:40px; height: 40px; line-height: 40px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
 
 
-
-              // li icon에 마우스 오버,아웃하면 각각의 상태를 바꾸는 스크립트
-              // .hover(),          .children(), .next(), .prev(), .addClass(),    .removeClass()
-              // 마우스 오버/아웃(), 자식(),      동생(),  형(),   클래스 추가(),   클래스 제거()
-              // console.log($(".li-icon img").first());
-              // $(".active > ul > li").hover(
-              //     function () {},
-              //     function () {}
-              // );
-          });
-      </script>
-</body>
-
-</html>
+                
+                  <div class="container-fluid bg-primary">
+                    <div class="container">
+                        <p class="brand text-light">달무리 (청년문화 기획사)</p>
+                        <p class="info text-light">대표자 : 문준혁   사업자등록번호 : 679-88-01593   주소 : 광주광역시 동구문화전당로5 3층 전화 : 062-362-7797  이메일 : us@aicc.com</p>
+                        <nav class="under-nav">
+                        <ul class="d-flex">
+                          <li><a href="#" class="text-light">이용약관</a></li>
+                          <li><a href="#" class="text-light">개인정보취급방침</a></li>
+                          <li><a href="#" class="text-light">무단이메일수집거부</a></li>
+                          <li><a href="#" class="text-light">환불정책</a></li>
+                          <li><a href="#" class="text-light">자주묻는질문</a></li>
+                        </ul>
+                      </nav>
+                      <p class="copy text-light">&copy; ai codecamp. 2023. all rights reserved.</p>
+                    </div>
+                  </div>
+                </footer>
+                <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+                
+             
+                <script
+                    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+                    crossorigin="anonymous"
+                ></script>
+                <script>
+                    $("#search-box").css({
+                        position: "fixed",
+                        top: "-120px",
+                        width: "100%",
+                        background: "white",
+                        zIndex: 100
+                    })
+                    $(function () {                
+                        $("#search").click(function(e){ // e : event 정보를 갖고 있는 이벤트 객체 (DOM)
+                            e.preventDefault(); // DOM 요소가 갖는 기본기능을 해제(ex.a 태그 클릭시 페이지 상단 이동 기본기능)
+                            $("#search-box").animate({
+                                top: 0
+                            }); // jQuery Easing Plug-in : 다양한 animation 구사
+                        })
+                                    $(window).scroll(function(){
+                            checkScroll();
+                        });
+                        function checkScroll(){
+                            var cst = $(window).scrollTop(); // current scroll top
+                            if(cst > 150) {
+                                $("header").css({                            
+                                    width: "100%",
+                                    zIndex: 99,
+                                    top: "-120px"
+                                });
+                                setTimeout(function(){
+                                    $("header").addClass("moving-header"); // 클래스 추가 메소드  vs   .removeClass() 제거 메소드
+                                },2000); // 지정시간이 지나고 할일 실행하고 종료되는 메소드
+                            } else  {
+                                $("header").removeClass("moving-header");
+                                $("header").css({                            
+                                    width: "100%",
+                                    zIndex: 99,
+                                    top: 0,
+                                    boxShadow: "none"
+                                });
+                                $
+                            }
+                        }
+                    });
+                </script>
+            </body>
+            </html>
+            
